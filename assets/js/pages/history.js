@@ -46,7 +46,7 @@ function renderHistory(data, range) {
     return;
   }
   els.content.innerHTML = `
-    <p class="notice">Starter: ${data.daily.length} hari data (${formatDate(range.startDate, { day: 'numeric', month: 'short' })} – ${formatDate(range.endDate, { day: 'numeric', month: 'short', year: 'numeric' })}) berhasil dimuat. Ganti tampilan ini di <code>renderHistory()</code>.</p>
+    <p class="notice">Starter: ${data.daily.length} hari data (${formatDate(range.startDate, { day: 'numeric', month: 'short' })} – ${formatDate(range.endDate, { day: 'numeric', month: 'short', year: 'numeric' })}) berhasil dimuat.</p>
     <div class="table-wrapper section">
       <table class="table">
         <thead><tr><th>Tanggal</th><th>Cuaca</th><th>Maks</th><th>Min</th><th>Rata-rata</th><th>Hujan</th></tr></thead>
