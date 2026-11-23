@@ -34,7 +34,7 @@ function renderForecast(data) {
     return;
   }
   els.content.innerHTML = `
-    <p class="notice">Starter: data ${data.daily.length} hari & ${data.hourly.length} jam berhasil dimuat. Ganti tampilan ini di <code>renderForecast()</code>.</p>
+    <p class="notice">Starter: data ${data.daily.length} hari & ${data.hourly.length} jam berhasil dimuat. </p>
     <div class="table-wrapper section">
       <table class="table">
         <thead><tr><th>Tanggal</th><th>Cuaca</th><th>Maks</th><th>Min</th><th>Peluang hujan</th></tr></thead>
