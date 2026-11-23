@@ -1,0 +1,212 @@
+/**
+ * home.css — Styling khusus Dashboard (index.html).
+ * Owner: Maintainer.
+ */
+
+.home-top {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+/* ---------- Hero: cuaca saat ini ---------- */
+.hero {
+  background: var(--gradient-hero);
+  color: #fff;
+  border: 0;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero .state__text,
+.hero .spinner {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero .spinner {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+}
+
+.hero__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.hero__icon {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.hero__temp {
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.hero__label {
+  margin-top: var(--space-1);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.hero__range {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+.hero__meta {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  opacity: 0.85;
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero__stats dd,
+.aqi-summary__pollutants dd {
+  margin: 0;
+}
+
+.hero .stat__label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hero .stat__value small {
+  font-weight: 500;
+  font-size: var(--text-xs);
+  opacity: 0.85;
+}
+
+/* ---------- Ringkasan kualitas udara ---------- */
+#air-quality-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.aqi-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.aqi-summary__gauge {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--aqi-color) 0 100%);
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.55);
+}
+
+.aqi-summary__value {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.aqi-summary__us {
+  margin-top: var(--space-2);
+}
+
+.aqi-summary__pollutants {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-5) 0 var(--space-2);
+}
+
+.aqi-summary__link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- Kartu 3 hari ---------- */
+.day-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.day-card__name {
+  font-size: var(--text-base);
+}
+
+.day-card__icon {
+  font-size: 2.75rem;
+  line-height: 1;
+  margin-top: var(--space-2);
+}
+
+.day-card__label {
+  font-weight: 600;
+}
+
+.day-card__temp {
+  display: flex;
+  gap: var(--space-3);
+  align-items: baseline;
+  font-size: var(--text-xl);
+}
+
+/* ---------- Kartu fitur ---------- */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.feature-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  font-size: var(--text-xl);
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 900px) {
+  .home-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__top {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .hero__icon {
+    font-size: 3.5rem;
+  }
+
+  .hero__range {
+    margin-left: 0;
+    flex-direction: row;
+    gap: var(--space-4);
+    width: 100%;
+  }
+
+  .hero__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

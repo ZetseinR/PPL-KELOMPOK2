@@ -1,0 +1,28 @@
+# CODEOWNERS — reviewer wajib per file/folder.
+# GANTI @username di bawah dengan username GitHub anggota tim.
+# Aturan yang lebih bawah menang bila ada yang tumpang tindih.
+
+# Default: Maintainer
+*                                   @username-maintainer
+
+# Developer 1 — Prakiraan Cuaca
+/pages/forecast/                    @username-developer1
+/assets/js/pages/forecast.js        @username-developer1
+/assets/css/pages/forecast.css      @username-developer1
+
+# Developer 2 — Kualitas Udara
+/pages/air-quality/                 @username-developer2
+/assets/js/pages/air-quality.js     @username-developer2
+/assets/css/pages/air-quality.css   @username-developer2
+
+# Developer 3 — Riwayat Cuaca
+/pages/history/                     @username-developer3
+/assets/js/pages/history.js         @username-developer3
+/assets/css/pages/history.css       @username-developer3
+
+# File bersama — selalu wajib review Maintainer
+/assets/js/shared/                  @username-maintainer
+/assets/css/global.css              @username-maintainer
+/assets/css/components.css          @username-maintainer
+/assets/css/responsive.css          @username-maintainer
+/.github/                           @username-maintainer
