@@ -13,13 +13,20 @@ import { getAirQuality } from '../shared/api.js';
 import { resolveLocation, formatLocationName } from '../shared/geocoding.js';
 import { renderNavbar, renderFooter } from '../shared/navigation.js';
 import {
-  escapeHTML, getAqiCategory, formatNumber, formatTime,
-  showLoading, showError, showEmpty, clearLoading, getErrorMessage,
+    escapeHTML,
+    getAqiCategory,
+    formatNumber,
+    formatTime,
+    showLoading,
+    showError,
+    showEmpty,
+    clearLoading,
+    getErrorMessage,
 } from '../shared/utils.js';
 
 const els = {
-  subtitle: document.getElementById('page-subtitle'),
-  content: document.getElementById('page-content'),
+    subtitle: document.getElementById('page-subtitle'),
+    content: document.getElementById('page-content'),
 };
 
 let activeRequest = 0;
@@ -29,22 +36,22 @@ let activeRequest = 0;
  * @param {Awaited<ReturnType<typeof getAirQuality>>} data
  */
 function renderAirQuality(data) {
-  const { current, units } = data;
-  if (!current) {
-    showEmpty(els.content, 'Data kualitas udara tidak tersedia untuk lokasi ini.');
-    return;
-  }
-  const category = getAqiCategory(current.europeanAqi);
-  const pollutants = [
-    ['PM2.5', current.pm2_5, units.pm2_5],
-    ['PM10', current.pm10, units.pm10],
-    ['CO', current.co, units.co],
-    ['NO₂', current.no2, units.no2],
-    ['SO₂', current.so2, units.so2],
-    ['O₃', current.o3, units.o3],
-  ];
-  els.content.innerHTML = `
-    <p class="notice">Starter: data berhasil dimuat (${data.hourly.length} jam prakiraan). Ganti tampilan ini di <code>renderAirQuality()</code>.</p>
+    const { current, units } = data;
+    if (!current) {
+        showEmpty(els.content, 'Data kualitas udara tidak tersedia untuk lokasi ini.');
+        return;
+    }
+    const category = getAqiCategory(current.europeanAqi);
+    const pollutants = [
+        ['PM2.5', current.pm2_5, units.pm2_5],
+        ['PM10', current.pm10, units.pm10],
+        ['CO', current.co, units.co],
+        ['NO₂', current.no2, units.no2],
+        ['SO₂', current.so2, units.so2],
+        ['O₃', current.o3, units.o3],
+    ];
+    els.content.innerHTML = `
+    <p class="notice">Starter: data berhasil dimuat (${data.hourly.length} jam prakiraan).
     <div class="card section">
       <p class="card__subtitle">European AQI · ${formatTime(current.time)}</p>
       <p><strong style="font-size: 2rem">${formatNumber(current.europeanAqi)}</strong>
