@@ -1,0 +1,9 @@
+/**
+ * air-quality.css — Styling khusus halaman Kualitas Udara.
+ * Owner: Developer 2.
+ *
+ * Aturan:
+ * - Semua selector diawali prefix halaman (mis. .air-quality-...) agar tidak bentrok.
+ * - Gunakan variabel dari global.css (var(--color-primary), var(--space-4), dst).
+ * - Breakpoint: 1024px, 900px, 640px (sama dengan responsive.css).
+ */

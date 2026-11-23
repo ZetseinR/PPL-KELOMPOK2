@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Indeks kualitas udara dan konsentrasi polutan.">
+  <title>Kualitas Udara | Weather Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤️</text></svg>">
+
+  <!-- CSS bersama (urutan jangan diubah) -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+  <!-- CSS khusus halaman (Developer 2) -->
+  <link rel="stylesheet" href="../../assets/css/pages/air-quality.css">
+</head>
+<body>
+  <!-- Owner: Developer 2. Navbar & footer dirender otomatis oleh navigation.js -->
+  <header id="app-header"></header>
+
+  <main id="app">
+    <div class="page-header">
+      <h1 class="page-header__title">Kualitas Udara</h1>
+      <p class="page-header__subtitle" id="page-subtitle">Indeks kualitas udara dan konsentrasi polutan.</p>
+    </div>
+
+    <!-- Konten halaman dirender oleh assets/js/pages/air-quality.js -->
+    <div id="page-content"></div>
+  </main>
+
+  <footer id="app-footer"></footer>
+
+  <script type="module" src="../../assets/js/pages/air-quality.js"></script>
+</body>
+</html>
